@@ -1,0 +1,423 @@
+/* Global Reset and Font Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+}
+
+html {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* CSS Variables for Colors */
+:root {
+  --primary-navbackground: rgba(234, 241, 251, 0.5);
+  --primary-textcolor: rgb(5 71 163);
+  --white-color: white;
+  --grey-color: rgb(205, 194, 194);
+  --box-background: rgb(31 41 55);
+  --navbar-background: #333;
+  --navbar-text: #fff;
+  --highlight-color: #f7df1e;
+  --hover-background: #555;
+  --project-border-hover: #7c7a7a;
+  --shadow-color: rgba(93, 92, 92, 0.3);
+}
+
+/* Header Styling */
+header {
+  background-color: var(--navbar-background);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Takes up the remaining space */
+}
+
+footer {
+  background-color: var(--navbar-background);
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-box {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1300px;
+}
+
+.navbar .heading a {
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-size: 22px; /* Adjusted font size */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yellow {
+  color: var(--highlight-color);
+  padding-left: 10px;
+}
+
+.small-text {
+  color: var(--grey-color);
+}
+
+.navbar .list-container {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .list-items a {
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-size: 16px; /* Adjusted font size */
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .list-items a:hover {
+  background-color: var(--hover-background);
+  border-radius: 4px;
+}
+
+/* Main Content Styling */
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.about-section {
+  width: 65vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-me {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-section .about-me h1 {
+  color: black;
+  padding-bottom: 10px;
+  text-decoration: 2px solid black underline;
+}
+
+.about-section .about-me p {
+  font-weight: bold;
+  color: var(--hover-background);
+  padding-top: 30px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--navbar-background);
+}
+
+.footer-nav {
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: large;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+/* <------------media----------------> */
+
+/* Media Query for Mobile Phones */
+@media (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-feature-settings: normal;
+  }
+
+  html {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    width: 100vw;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    background-color: var(--navbar-background);
+    color: var(--navbar-text);
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: 50px; /* Adjusted based on your header height */
+    width: 70%;
+    height: 100vh;
+    background-color: var(--navbar-background);
+    z-index: 0;
+  }
+
+  .hamburger-box.active {
+    display: block; /* Show when active */
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-container a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    padding: 20px;
+  }
+
+  .list-items {
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    border: 0.1px solid grey;
+    font-weight: bold;
+  }
+
+  .navbar .heading a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .small-text {
+    color: var(--grey-color);
+    font-size: 0.7rem;
+  }
+
+  .list {
+    display: none;
+  }
+
+  /* Main */
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .about-section {
+    width: 90vw;
+    padding: 40px;
+    height: auto;
+  }
+
+  .about-me {
+    overflow: hidden;
+    height: auto;
+  }
+
+  .about-section .about-me h1 {
+    color: var(--highlight-color);
+  }
+
+  .about-section .about-me p {
+    font-weight: bold;
+    color: var(--navbar-background);
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-feature-settings: normal;
+  }
+
+  html {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    width: 100vw;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    background-color: var(--navbar-background);
+    color: var(--navbar-text);
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: 85px; /* Adjust based on your header height */
+    width: 70%;
+    height: 100%;
+    background-color: var(--navbar-background);
+    z-index: 0;
+  }
+
+  .hamburger-box.active {
+    display: block; /* Show when active */
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-container a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    padding: 20px;
+  }
+
+  .list-items {
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    border: 0.1px solid grey;
+    font-weight: bold;
+  }
+
+  .list-items a {
+    text-decoration: none;
+    color: var(--white-color);
+  }
+
+  .navbar .heading a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .small-text {
+    color: var(--grey-color);
+    font-size: 0.7rem;
+  }
+
+  .list {
+    display: none;
+  }
+
+  /* Main */
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .about-section {
+    width: 90vw;
+    padding: 40px;
+    height: auto;
+  }
+
+  .about-me {
+    overflow: hidden;
+    height: auto;
+  }
+
+  .about-section .about-me h1 {
+    color: black;
+  }
+
+  .about-section .about-me p {
+    font-weight: bold;
+    color: var(--navbar-background);
+  }
+}

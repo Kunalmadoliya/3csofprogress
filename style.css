@@ -1,0 +1,392 @@
+/* Global Reset and Font Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+}
+
+html {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* CSS Variables for Colors */
+:root {
+  --primary-navbackground: rgba(234, 241, 251, 0.5);
+  --primary-textcolor: rgb(5 71 163);
+  --white-color: white;
+  --grey-color: rgb(205, 194, 194);
+  --box-background: rgb(31 41 55);
+  --navbar-background: #333;
+  --navbar-text: #fff;
+  --highlight-color: #f7df1e;
+  --hover-background: #555;
+  --project-border-hover: #7c7a7a;
+  --shadow-color: rgba(93, 92, 92, 0.3);
+}
+
+/* Header Styling */
+header {
+  background-color: var(--navbar-background);
+}
+
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-box {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1300px;
+}
+
+.navbar .heading a {
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-size: 22px; /* Adjusted font size */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yellow {
+  color: var(--highlight-color);
+  padding-left: 10px;
+}
+
+.small-text {
+  color: var(--grey-color);
+}
+
+.navbar .list-container {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .list-items a {
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-size: 16px; /* Adjusted font size */
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .list-items a:hover {
+  background-color: var(--hover-background);
+  border-radius: 4px;
+}
+
+/* Main Content Styling */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.description-box {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* Removed fixed height */
+  width: 100%; /* Ensures the description box takes full width */
+  max-width: 900px; /* Limits maximum width for better readability */
+  box-sizing: border-box;
+}
+
+.box {
+  display: flex;
+  flex-direction: column; /* Stack content vertically for better mobile display */
+  align-items: center;
+  justify-content: center;
+  background-color: var(--box-background);
+  color: var(--white-color);
+  border-radius: 20px;
+  padding: 40px; /* Adjusted padding for more compact display */
+  width: 100%; /* Full width for responsiveness */
+  max-width: 900px; /* Set a max-width for better readability */
+  box-sizing: border-box;
+}
+
+.box h1 {
+  font-weight: 900;
+  font-size: 1.8rem; /* Adjusted font size */
+  text-align: center;
+}
+
+.box p {
+  font-size: 1.2rem; /* Adjusted font size */
+  color: var(--grey-color);
+  text-align: center; /* Center text for better aesthetics */
+  margin-top: 10px; /* Added margin for spacing */
+  max-width: 800px; /* Limited width for better readability */
+}
+
+/* Project Boxes and Buttons */
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-textcolor);
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.box2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Adjusted for responsiveness */
+  gap: 20px;
+  padding: 30px;
+}
+
+.project-box1 {
+  padding: 10px;
+  border: 2px solid var(--grey-color);
+  font-size: 20px; /* Adjusted font size */
+  height: 300px; /* Adjusted height */
+  width: 260px;
+  transition: .3s;
+}
+
+.project-box1:hover {
+  border: 2px solid var(--project-border-hover);
+}
+
+.project-pics {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-pics:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 10px 20px var(--shadow-color);
+}
+
+/* Project Text Styling */
+.project-box2 {
+  height: 110px;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.project-box2 a h1 {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.project-box2 .para {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  max-height: 4.5rem; /* Limit text to 3 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* Project Details */
+.project-details {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.details {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--navbar-background);
+}
+
+.footer-nav {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Social Media Links */
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: large;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+/* <----------project------------------> */
+
+.mainbox {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    width: 100vw;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    background-color: var(--navbar-background);
+    color: var(--navbar-text);
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: 85px; /* Adjusted based on your header height */
+    width: 70%;
+    height: 100vh;
+    background-color: var(--navbar-background);
+    z-index: 0;
+  }
+
+  .hamburger-box.active {
+    display: block; /* Show when active */
+  }
+
+  .list-container a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    padding: 20px;
+  }
+
+  .list-items {
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    border: 0.1px solid grey;
+    font-weight: bold;
+  }
+
+  .navbar .heading a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .small-text {
+    color: var(--grey-color);
+    font-size: 0.7rem;
+  }
+
+  .list {
+    display: none;
+  }
+
+  /* Main */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0; /* Removed padding */
+    margin: 0; /* Ensured no extra margin */
+  }
+
+  .description-box {
+    width: 90vw;
+    padding-top: 40px; /* Adjusted padding-top */
+  }
+
+  .box {
+    background-color: var(--box-background);
+    color: var(--white-color);
+    border-radius: 10px;
+    width: 90%; /* Adjusted width to better fit viewport */
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding: 40px; /* Adjusted padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+
+  .box h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  .box p {
+    padding-top: 10px; /* Adjusted padding-top */
+    font-size: 0.9rem; /* Adjusted font size */
+    color: var(--grey-color);
+    width: 100%; /* Full width of the box */
+  }
+
+  .footer-nav {
+    z-index: 1000;
+  }
+}

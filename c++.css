@@ -1,0 +1,354 @@
+/* Global Reset and Font Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+}
+
+html {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* CSS Variables for Colors */
+:root {
+  --primary-navbackground: rgba(234, 241, 251, 0.5);
+  --primary-textcolor: rgb(5 71 163);
+  --white-color: white;
+  --grey-color: rgb(205, 194, 194);
+  --box-background: rgb(31 41 55);
+  --navbar-background: #333;
+  --navbar-text: #fff;
+  --highlight-color: #f7df1e;
+  --hover-background: #555;
+  --project-border-hover: #7c7a7a;
+  --shadow-color: rgba(93, 92, 92, 0.3);
+}
+
+/* Header Styling */
+header {
+  background-color: var(--navbar-background);
+}
+
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-box {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1300px;
+}
+
+.navbar .heading a {
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-size: 22px; /* Adjusted font size */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yellow {
+  color: var(--highlight-color);
+  padding-left: 10px;
+}
+
+.small-text {
+  color: var(--grey-color);
+}
+
+.navbar .list-container {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .list-items a {
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-size: 16px; /* Adjusted font size */
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .list-items a:hover {
+  background-color: var(--hover-background);
+  border-radius: 4px;
+}
+
+/* Main Content Styling */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+ 
+ 
+}
+
+.main-container {
+  width: 68vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
+ 
+ 
+
+}
+
+.main-container h1 {
+  margin-bottom: 30px;
+  font-size: 4rem;
+}
+.main-container h2 {
+  color: var(--hover-background);
+  margin-bottom: 20px;
+
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, 1fr);    /* 3 rows */
+  gap: 10px; /* space between boxes */
+  height: auto;
+  width: 100%; 
+  padding: 20px;
+  background-color: rgba(248, 248, 248, 0.586);
+  border-radius: 8px;
+}
+
+
+
+/* <----------------main-boxes--------------> */
+.boxes {
+  border: 2px solid var(--grey-color);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: .3s;
+  cursor: pointer;
+
+}
+
+.notes a{
+  
+  text-decoration: none;
+}
+
+.boxes  p {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+.boxes:hover{
+ 
+  border: 2px solid var(--hover-background);
+}
+
+.btn{
+
+  display: flex;
+  justify-content: center;
+}
+
+.btn button{
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-textcolor);
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+
+.hidden {
+  display: none;
+  
+}
+
+.hidden.active{
+  display: block;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Footer Styling */
+footer {
+  background-color: var(--navbar-background);
+}
+
+.footer-nav {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Social Media Links */
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: large;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+/* <----------project------------------> */
+
+.mainbox {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    width: 100vw;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    background-color: var(--navbar-background);
+    color: var(--navbar-text);
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: 85px; /* Adjusted based on your header height */
+    width: 70%;
+    height: 100vh;
+    background-color: var(--navbar-background);
+    z-index: 0;
+  }
+
+  .hamburger-box.active {
+    display: block; /* Show when active */
+  }
+
+  .list-container a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    padding: 20px;
+  }
+
+  .list-items {
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    border: 0.1px solid grey;
+    font-weight: bold;
+  }
+
+  .navbar .heading a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .small-text {
+    color: var(--grey-color);
+    font-size: 0.7rem;
+  }
+
+  .list {
+    display: none;
+  }
+
+  /* Main */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px; /* Removed padding */
+    margin: 0; /* Ensured no extra margin */
+  }
+
+  .main-container {
+    width: 100vw;
+    height: auto;
+    height: auto;
+    
+  }
+
+  .main-container h1 {
+    font-size: rem; /* Reduced font-size for smaller screens */
+  
+  }
+
+  .notes {
+   
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    gap: 10px;
+    width: 100%; /* Ensure it takes the full width */
+    height: 450px; /* Set a fixed height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+   
+  .btn{
+    padding-top: 30px;
+  }
+  /* <--------------footer-----------> */
+  .footer-nav {
+    z-index: 1000;
+  }
+}
+
+
