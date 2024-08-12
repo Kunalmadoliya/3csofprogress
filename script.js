@@ -3,9 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const hamburgerBox = document.querySelector(".hamburger-box");
 
  
-    hamburger.addEventListener("click", function() {
-      hamburgerBox.classList.toggle("active");
-    });
+  
+
+// Toggle the active class when the hamburger icon is clicked
+hamburger.addEventListener('click', () => {
+    hamburgerBox.classList.toggle('active');
+});
+
 
     const btn = document.querySelector('.btn button');
 const hiddenElements = document.querySelectorAll('.hidden');

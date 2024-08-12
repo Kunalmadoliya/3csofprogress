@@ -298,9 +298,10 @@ footer {
     color: var(--navbar-text);
     border: none;
     cursor: pointer;
-  }
+    transition:  .3s;
+}
 
-  .hamburger-box {
+.hamburger-box {
     display: none; /* Hidden by default */
     position: absolute;
     right: 0;
@@ -309,11 +310,17 @@ footer {
     height: 100vh;
     background-color: var(--navbar-background);
     z-index: 0;
-  }
+    transform: translateX(100%); /* Start off-screen */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transitions */
+}
 
-  .hamburger-box.active {
+.hamburger-box.active {
     display: block; /* Show when active */
-  }
+    transform: translateX(0); /* Slide in */
+    opacity: 1; /* Fade in */
+}
+
 
   .list-container a {
     text-decoration: none;

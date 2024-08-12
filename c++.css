@@ -63,7 +63,7 @@ header {
 .navbar .heading a {
   text-decoration: none;
   color: var(--navbar-text);
-  font-size: 22px; /* Adjusted font size */
+  font-size: 22px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -94,7 +94,7 @@ header {
 .navbar .list-items a {
   text-decoration: none;
   color: var(--navbar-text);
-  font-size: 16px; /* Adjusted font size */
+  font-size: 16px;
   padding: 8px 12px;
   transition: background-color 0.3s ease;
 }
@@ -111,8 +111,6 @@ main {
   align-items: center;
   justify-content: center;
   height: fit-content;
- 
- 
 }
 
 .main-container {
@@ -121,19 +119,24 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   padding: 30px;
- 
- 
-
 }
 
 .main-container h1 {
+  background-color: var(--box-background);
+  color: var(--navbar-text);
   margin-bottom: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
   font-size: 4rem;
 }
+
 .main-container h2 {
   color: var(--hover-background);
   margin-bottom: 20px;
-
 }
 
 .notes {
@@ -148,9 +151,6 @@ main {
   border-radius: 8px;
 }
 
-
-
-/* <----------------main-boxes--------------> */
 .boxes {
   border: 2px solid var(--grey-color);
   height: 100px;
@@ -160,30 +160,30 @@ main {
   border-radius: 20px;
   transition: .3s;
   cursor: pointer;
-
+  text-align: center;
 }
 
-.notes a{
-  
+.notes a {
   text-decoration: none;
 }
 
-.boxes  p {
+.boxes p {
   text-transform: capitalize;
   font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
 }
-.boxes:hover{
- 
+
+.boxes:hover {
   border: 2px solid var(--hover-background);
 }
 
-.btn{
-
+.btn {
   display: flex;
   justify-content: center;
 }
 
-.btn button{
+.btn button {
   padding: 15px 30px;
   font-size: 16px;
   cursor: pointer;
@@ -199,20 +199,17 @@ main {
   text-transform: capitalize;
 }
 
-
 .hidden {
   display: none;
-  
 }
 
-.hidden.active{
-  display: block;
+.hidden.active {
+  
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-
 
 /* Footer Styling */
 footer {
@@ -262,9 +259,10 @@ footer {
     color: var(--navbar-text);
     border: none;
     cursor: pointer;
-  }
+    transition:  .3s;
+}
 
-  .hamburger-box {
+.hamburger-box {
     display: none; /* Hidden by default */
     position: absolute;
     right: 0;
@@ -273,11 +271,16 @@ footer {
     height: 100vh;
     background-color: var(--navbar-background);
     z-index: 0;
-  }
+    transform: translateX(100%); /* Start off-screen */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transitions */
+}
 
-  .hamburger-box.active {
+.hamburger-box.active {
     display: block; /* Show when active */
-  }
+    transform: translateX(0); /* Slide in */
+    opacity: 1; /* Fade in */
+}
 
   .list-container a {
     text-decoration: none;
@@ -323,17 +326,14 @@ footer {
   .main-container {
     width: 100vw;
     height: auto;
-    height: auto;
-    
   }
 
   .main-container h1 {
+    height: 90px;
     font-size: rem; /* Reduced font-size for smaller screens */
-  
   }
 
   .notes {
-   
     display: grid;
     grid-template-columns: 1fr; /* Single column layout for smaller screens */
     gap: 10px;
@@ -342,13 +342,12 @@ footer {
     overflow-y: auto; /* Enable vertical scrolling */
   }
    
-  .btn{
+  .btn {
     padding-top: 30px;
   }
+
   /* <--------------footer-----------> */
   .footer-nav {
     z-index: 1000;
   }
 }
-
-
