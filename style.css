@@ -199,6 +199,7 @@ main {
 .project-pics {
   width: 100%;
   height: 150px;
+  background-image: url(navbar.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

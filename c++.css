@@ -135,6 +135,7 @@ main {
 }
 
 .main-container h2 {
+  text-align: center;
   color: var(--hover-background);
   margin-bottom: 20px;
 }

@@ -127,6 +127,7 @@ main {
   align-items: center;
   justify-content: center;
   height: fit-content;
+  
  
  
 }
@@ -135,7 +136,7 @@ main {
 
 .about-section {
   width: 68vw;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -148,18 +149,19 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0px;
+  
 }
 
 .about-section .about-me h1 {
   background-color: var(--box-background);
   color: var(--navbar-text);
-  margin-bottom: 30px;
+  
   border-radius: 20px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
   font-size: 4rem;
 }
 
