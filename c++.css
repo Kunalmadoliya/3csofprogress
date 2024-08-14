@@ -326,7 +326,8 @@ footer {
 
   .main-container {
     width: 100vw;
-    height: auto;
+    height:100vh ;
+    border: 2px solid red;
   }
 
   .main-container h1 {
@@ -339,12 +340,26 @@ footer {
     grid-template-columns: 1fr; /* Single column layout for smaller screens */
     gap: 10px;
     width: 100%; /* Ensure it takes the full width */
-    height: 450px; /* Set a fixed height for scrolling */
+    height: 550px; /* Set a fixed height for scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
+    border: 2px solid red;
   }
    
   .btn {
     padding-top: 30px;
+    display: none;
+  }
+
+  .boxes {
+    border: 2px solid var(--grey-color);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
   }
 
   /* <--------------footer-----------> */
