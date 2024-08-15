@@ -327,7 +327,7 @@ footer {
   .main-container {
     width: 100vw;
     height:100vh ;
-    border: 2px solid red;
+   
   }
 
   .main-container h1 {
@@ -342,7 +342,7 @@ footer {
     width: 100%; /* Ensure it takes the full width */
     height: 550px; /* Set a fixed height for scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
-    border: 2px solid red;
+   
   }
    
   .btn {
