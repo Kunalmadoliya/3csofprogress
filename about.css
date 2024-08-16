@@ -129,6 +129,7 @@ footer {
   z-index: 1000; /* Ensure it's below the footer nav */
   text-transform: capitalize;
   font-weight: bold;
+  display: none;
 }
 
 .off-screen-menu ul {
@@ -145,11 +146,13 @@ footer {
 
 /* Hamburger Menu */
 .ham-menu {
+ 
   height: 30px;
   width: 30px;
   margin-left: auto;
   position: relative;
   z-index: 1000; /* Ensure it's below the footer nav */
+  display: none;
 }
 
 .ham-menu span {
@@ -162,7 +165,7 @@ footer {
   top: 50%;
   transform: translate(-50%, -50%);
   transition: .3s ease;
-  display: none;
+  
 }
 
 .ham-menu span:nth-child(1) {
@@ -289,7 +292,7 @@ main {
     height: 100vh;
     width: 50%;
     max-width: 450px;
-   
+    display: block;
     top: 87px;
     position: absolute;
     right: -450px;
@@ -318,10 +321,12 @@ main {
   }
 
   .ham-menu {
+    display: block;
     height: 30px;
     width: 30px;
     margin-left: auto;
     position: relative;
+    display: block;
   }
 
   .ham-menu span {

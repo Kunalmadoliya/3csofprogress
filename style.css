@@ -260,6 +260,7 @@ main {
   z-index: 1000; /* Ensure it's below the footer nav */
   text-transform: capitalize;
   font-weight: bold;
+  display: none;
 }
 
 .off-screen-menu ul {
@@ -281,6 +282,7 @@ main {
   margin-left: auto;
   position: relative;
   z-index: 1000; /* Ensure it's below the footer nav */
+  display: none;
 }
 
 .ham-menu span {
@@ -369,7 +371,7 @@ footer {
     height: 100vh;
     width: 50%;
     max-width: 450px;
-   
+   display: block;
     top: 87px;
     position: absolute;
     right: -450px;
@@ -402,6 +404,7 @@ footer {
     width: 30px;
     margin-left: auto;
     position: relative;
+    display: block;
   }
 
   .ham-menu span {
