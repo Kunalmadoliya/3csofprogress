@@ -4,7 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
  
   
+const hamMenu = document.querySelector(".ham-menu");
 
+const offScreenMenu = document.querySelector(".off-screen-menu");
+
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+});
 // Toggle the active class when the hamburger icon is clicked
 hamburger.addEventListener('click', () => {
     hamburgerBox.classList.toggle('active');
