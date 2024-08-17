@@ -1,30 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.querySelector(".hamburger");
-    const hamburgerBox = document.querySelector(".hamburger-box");
+document.addEventListener("DOMContentLoaded", function () {
+  const projects = document.querySelector(".projects");
+  const aboutSection = document.querySelector(".about-section");
+  const btn = document.querySelector(".btn button"); // Adjusted to select the button inside .btn
+  const hiddenElements = document.querySelectorAll(".hidden");
+
+  const hamMenu = document.querySelector(".ham-menu");
+  const offScreenMenu = document.querySelector(".off-screen-menu");
+
+  // Toggle classes for the hamburger menu and sections
+  hamMenu.addEventListener("click", () => {
+    hamMenu.classList.toggle("active");
+    offScreenMenu.classList.toggle("active");
+    projects.classList.toggle("active");
+  });
 
  
-  
-const hamMenu = document.querySelector(".ham-menu");
+  // Show hidden elements when button is clicked
+  btn.addEventListener("click", function () {
+    hiddenElements.forEach(function (element) {
+      element.classList.add("active");
+    });
 
-const offScreenMenu = document.querySelector(".off-screen-menu");
-
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("active");
-  offScreenMenu.classList.toggle("active");
-});
-// Toggle the active class when the hamburger icon is clicked
-hamburger.addEventListener('click', () => {
-    hamburgerBox.classList.toggle('active');
-});
-
-
-    const btn = document.querySelector('.btn button');
-const hiddenElements = document.querySelectorAll('.hidden');
-
-btn.addEventListener('click', function() {
-  hiddenElements.forEach(function(element) {
-    element.classList.add('active');
+    // Debugging statement
+    console.log("Button clicked to show hidden elements");
   });
 });
-
-  });

@@ -10,12 +10,15 @@
 }
 
 html {
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
 }
 
 body::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
+  /* For Chrome, Safari, and Opera */
 }
 
 /* CSS Variables for Colors */
@@ -136,11 +139,14 @@ main {
 
 .notes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(3, 1fr);    /* 3 rows */
-  gap: 10px; /* space between boxes */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  grid-template-rows: repeat(3, 1fr);
+  /* 3 rows */
+  gap: 10px;
+  /* space between boxes */
   height: auto;
-  width: 100%; 
+  width: 100%;
   padding: 20px;
   background-color: rgba(248, 248, 248, 0.586);
   border-radius: 8px;
@@ -199,7 +205,7 @@ main {
 }
 
 .hidden.active {
-  
+
   display: flex;
   text-align: center;
   align-items: center;
@@ -211,90 +217,13 @@ footer {
   background-color: var(--navbar-background);
 }
 
-.footer-nav {
-  padding: 25px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.off-screen-menu {
-  background-color: var(--navbar-background);
-  height: 100vh;
-  width: 50vw;
-  max-width: 450px;
-  position: fixed;
-  top: 0;
-  right: -450px;
-  display: none;
-  flex-direction: column;
-  font-size: 1rem;
-  transition: .3s ease;
-  z-index: 1000; /* Ensure it's below the footer nav */
-  text-transform: capitalize;
-  font-weight: bold;
-  display: none;
-}
-
 .off-screen-menu ul {
-  padding-top: 88px;
+  display: none;
 }
 
-.off-screen-menu ul li {
-  padding-top: 20px;
-}
 
-.off-screen-menu.active {
-  right: 0;
-}
-
-/* Hamburger Menu */
 .ham-menu {
   display: none;
-  height: 30px;
-  width: 30px;
-  margin-left: auto;
-  position: relative;
-  z-index: 1000; /* Ensure it's below the footer nav */
-}
-
-.ham-menu span {
-  height: 4px;
-  width: 100%;
-  background-color: var(--white-color);
-  border-radius: 25px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: .3s ease;
-  display: none;
-}
-
-.ham-menu span:nth-child(1) {
-  top: 25%;
-}
-
-.ham-menu span:nth-child(3) {
-  top: 75%;
-}
-
-.ham-menu.active span {
-  background-color: white;
-}
-
-.ham-menu.active span:nth-child(1) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.ham-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.ham-menu.active span:nth-child(3) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* Footer Social Media Links */
@@ -317,55 +246,73 @@ footer {
 
 @media (max-width: 768px) {
 
-  /* Navbar */
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 25px;
-    width: 100vw;
+    padding: 15px 20px;
     position: relative;
   }
 
-  
+  .navbar h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .navbar .list-container {
+    display: none;
+    /* Hide list in mobile view */
+  }
+
+  /* <--------------------hamburger-menu------------> */
   .off-screen-menu {
-    background-color: var(--navbar-background);
-    height: 100vh;
-    width: 50%;
-    max-width: 450px;
-    display: block;
-    top: 87px;
+    background-color: rgb(34, 33, 33);
+    height: 0;
+    /* Initially hidden */
+    width: 100vw;
+    max-width: 100%;
     position: absolute;
-    right: -450px;
-    display: flex;
+    top: 78px;
+    right: 0px;
+    display: grid;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 1rem;
-    transition: .3s ease;
-    z-index: 0px; /* Ensure it's below the footer nav */
     text-transform: capitalize;
     font-weight: bold;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.3s ease,
+      /* Add transition for smooth effect */
+  }
+
+  .off-screen-menu.active {
+    height: 30vh;
+    /* Adjusted height for active state */
+    opacity: 1;
+    /* Show the menu */
   }
 
   .off-screen-menu ul {
-    padding: 0;
     list-style: none;
+    display: block;
+    /* Show the list items in the menu */
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+
   }
 
- 
-  .off-screen-menu.active {
-    right: 0;
+  .off-screen-menu ul li {
+    padding-top: 20px;
+    width: 100%;
   }
-  
 
-  .list-container .list-items {
-    display: none;
-  }
 
   .ham-menu {
     height: 30px;
     width: 30px;
     margin-left: auto;
     position: relative;
+    z-index: 1000;
     display: block;
   }
 
@@ -377,9 +324,9 @@ footer {
     position: absolute;
     left: 50%;
     top: 50%;
-    display: block;
     transform: translate(-50%, -50%);
     transition: .3s ease;
+    display: block;
   }
 
   .ham-menu span:nth-child(1) {
@@ -388,10 +335,6 @@ footer {
 
   .ham-menu span:nth-child(3) {
     top: 75%;
-  }
-
-  .ham-menu.active span {
-    background-color: white;
   }
 
   .ham-menu.active span:nth-child(1) {
@@ -408,89 +351,40 @@ footer {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
+  /* <----------------------notes--------------> */
 
+  .notes {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column layout for smaller screens */
+    gap: 10px;
+    width: 100%;
+    /* Ensure it takes the full width */
+    height: 550px;
+    /* Set a fixed height for scrolling */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
 
-  .list-container a {
-    text-decoration: none;
-    color: var(--navbar-text);
-    padding: 20px;
   }
 
-  .list-items {
-    text-decoration: none;
-    list-style: none;
-    padding: 20px;
-    border: 0.1px solid grey;
-    font-weight: bold;
-  }
 
-  .navbar .heading a {
-    text-decoration: none;
-    color: var(--navbar-text);
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  .small-text {
-    color: var(--grey-color);
-    font-size: 0.7rem;
-  }
-
-  .list {
+  .btn button {
     display: none;
-  }
-
-  /* Main */
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    padding: 20px; /* Removed padding */
-    margin: 0; /* Ensured no extra margin */
   }
 
   .main-container {
     width: 100vw;
-    height:100vh ;
-   
   }
 
-  .main-container h1 {
-    height: 90px;
-    font-size: rem; /* Reduced font-size for smaller screens */
+  .main-container.active {
+
+    margin-top: 210px;
+    width: 100vw;
   }
 
-  .notes {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    gap: 10px;
-    width: 100%; /* Ensure it takes the full width */
-    height: 550px; /* Set a fixed height for scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
-   
-  }
-   
-  .btn {
-    padding-top: 30px;
-    display: none;
-  }
 
-  .boxes {
-    border: 2px solid var(--grey-color);
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    transition: .3s;
-    cursor: pointer;
-    text-align: center;
-  }
-
-  /* <--------------footer-----------> */
   .footer-nav {
-    z-index: 1000;
+    padding: 35px 25px;
   }
+
 }
