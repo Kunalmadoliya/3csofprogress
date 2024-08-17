@@ -264,13 +264,12 @@ footer {
   /* <--------------------hamburger-menu------------> */
   .off-screen-menu {
     background-color: rgb(34, 33, 33);
-    height: 0;
-    /* Initially hidden */
+    height: 0; /* Initially hidden */
     width: 100vw;
     max-width: 100%;
     position: absolute;
     top: 78px;
-    right: 0px;
+    right: 0;
     display: grid;
     flex-direction: column;
     justify-content: center;
@@ -280,32 +279,26 @@ footer {
     font-weight: bold;
     opacity: 0;
     overflow: hidden;
-    transition: height 0.3s ease,
-      /* Add transition for smooth effect */
+    transition: height 0.3s ease, opacity 0.3s ease;
   }
 
   .off-screen-menu.active {
-    height: 30vh;
-    /* Adjusted height for active state */
-    opacity: 1;
-    /* Show the menu */
+    height: 30vh; /* Adjusted height for active state */
+    opacity: 1; /* Show the menu */
   }
 
   .off-screen-menu ul {
     list-style: none;
-    display: block;
-    /* Show the list items in the menu */
+    display: block; /* Show the list items in the menu */
     padding: 0;
     width: 100vw;
     text-align: center;
-
   }
 
   .off-screen-menu ul li {
     padding-top: 20px;
     width: 100%;
   }
-
 
   .ham-menu {
     height: 30px;
@@ -372,8 +365,10 @@ footer {
     display: none;
   }
 
+ 
   .main-container {
     width: 100vw;
+    transition: margin-top 0.3s ease, width 0.3s ease;
   }
 
   .main-container.active {
