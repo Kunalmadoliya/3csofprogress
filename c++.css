@@ -246,16 +246,25 @@ footer {
 }
 
 @media (max-width: 768px) {
-
   .navbar {
-    padding: 15px 20px;
     position: relative;
+    height: 90px;
+    width: 100vw;
+   
   }
 
-  .navbar h1 {
-    font-size: 20px;
-    text-align: center;
+  .navbar-items {
+    width: 100%;
   }
+
+  .navbar .heading a {
+    font-size: 1rem;
+  }
+
+  .small-text {
+    font-size: 0.7rem;
+  }
+  
 
   .navbar .list-container {
     display: none;
@@ -269,7 +278,7 @@ footer {
     width: 100vw;
     max-width: 100%;
     position: absolute;
-    top: 78px;
+    top: 90px;
     right: 0;
     display: grid;
     flex-direction: column;

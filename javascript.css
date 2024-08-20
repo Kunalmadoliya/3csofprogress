@@ -165,11 +165,12 @@ main {
   }
 
   .navbar {
-    padding: 20px 25px;
-    width: 100vw;
+ 
     position: relative;
+    height: 90px;
+   
   }
-
+  
   .navbar-items {
     width: 100%;
   }
@@ -188,7 +189,7 @@ main {
     width: 100vw;
     max-width: 100%;
     position: absolute;
-    top: 78px;
+    top: 90px;
     right: 0px;
     display: grid;
     flex-direction: column;

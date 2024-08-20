@@ -299,17 +299,23 @@ main {
 /* Responsive Styles */
 @media (max-width: 768px) {
 
-  /* Navbar */
   .navbar {
- 
     position: relative;
     height: 90px;
+    width: 100vw;
    
   }
-  
-  .navbar h1 {
-    font-size: 20px;
-    text-align: center;
+
+  .navbar-items {
+    width: 100%;
+  }
+
+  .navbar .heading a {
+    font-size: 1rem;
+  }
+
+  .small-text {
+    font-size: 0.7rem;
   }
   
   .navbar .list-container {
