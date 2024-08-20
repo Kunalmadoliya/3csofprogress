@@ -215,6 +215,7 @@ main {
 /* Footer Styling */
 footer {
   background-color: var(--navbar-background);
+  padding: 25px 25px;
 }
 
 .off-screen-menu ul {
@@ -377,9 +378,5 @@ footer {
     width: 100vw;
   }
 
-
-  .footer-nav {
-    padding: 35px 25px;
-  }
 
 }
