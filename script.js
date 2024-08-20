@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     projects.classList.toggle("active");
   });
 
+  
+
  
   // Show hidden elements when button is clicked
   btn.addEventListener("click", function () {

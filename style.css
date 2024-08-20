@@ -169,6 +169,7 @@ main {
 
 .btn {
   padding: 15px 30px;
+  margin-top: 20px;
   font-size: 16px;
   cursor: pointer;
   display: flex;
@@ -185,10 +186,11 @@ main {
 }
 
 .box2 {
-  display: flex;
-  gap: 20px;
-  padding: 30px;
-  flex-wrap: wrap;
+ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 10px;
 }
 
 /* Project Images */
@@ -201,6 +203,13 @@ main {
 
 .pic2 {
   background-image: url(cursol.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pic3 {
+  background-image: url(tabbed-interface.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -515,6 +524,10 @@ main {
     text-transform: capitalize;
     font-size: 0.9rem;
     font-weight: bold;
+  }
+
+  .btn{
+    margin: 0px;
   }
 
   .footer-nav {
