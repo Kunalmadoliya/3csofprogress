@@ -274,87 +274,26 @@ main {
 }
 
 /* Off-Screen Menu */
-.off-screen-menu {
-  background-color: rgb(34, 33, 33);
-  height: 0; /* Initially hidden */
-  width: 100vw;
-  max-width: 100%;
-  position: absolute;
-  top: 78px;
-  right: 0px;
-  display: grid;
-  flex-direction: column;
+
+.footer-nav {
+  padding: 25px 20px;
+  display: flex;
   justify-content: center;
+  background-color: var(--navbar-background);
   align-items: center;
-  font-size: 1rem;
-  text-transform: capitalize;
-  font-weight: bold;
-  opacity: 0;
-  overflow: hidden;
-  transition: height 0.3s ease, opacity 0.3s ease; /* Smooth transition for height and opacity */
+  z-index: 1001; /* Ensure it's above the hamburger menu */
+ 
 }
 
-.off-screen-menu.active {
-  height: 30vh; /* Adjusted height for active state */
-  opacity: 1; /* Show the menu */
-}
-
-.off-screen-menu ul {
-  list-style: none;
-  display: block; /* Show the list items in the menu */
-  padding: 0;
-  width: 100vw;
-  text-align: center;
-}
-
-.off-screen-menu ul li {
-  padding-top: 20px;
-  width: 100%;
-}
-
-/* Hamburger Menu */
-.ham-menu {
-  height: 30px;
-  width: 30px;
-  margin-left: auto;
-  position: relative;
-  z-index: 1000;
-  display: block;
-  transition: transform 0.3s ease; /* Smooth transition for transform */
-}
-
-.ham-menu span {
-  height: 4px;
-  width: 100%;
-  background-color: var(--white-color);
-  border-radius: 25px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
-}
-
-.ham-menu span:nth-child(1) {
-  top: 25%;
-}
-
-.ham-menu span:nth-child(3) {
-  top: 75%;
-}
-
-.ham-menu.active span:nth-child(1) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.ham-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.ham-menu.active span:nth-child(3) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: large;
+  font-weight: 500;
+  letter-spacing: 5px;
 }
 
 /* Responsive Styles */
@@ -491,5 +430,26 @@ main {
   /* Project Box Text */
   .project-box2 {
     height: 60px;
+  }
+
+  .footer-nav {
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--navbar-background);
+    align-items: center;
+    z-index: 1001; /* Ensure it's above the hamburger menu */
+   
+  }
+  
+  .social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: large;
+    font-weight: 500;
+    letter-spacing: 5px;
   }
 }
