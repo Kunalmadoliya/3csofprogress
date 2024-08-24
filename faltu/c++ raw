@@ -1,0 +1,93 @@
+.main-container h1 {
+  background-color: var(--box-background);
+  color: var(--navbar-text);
+  margin-bottom: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  font-size: 4rem;
+}
+
+.main-container h2 {
+  text-align: center;
+  color: var(--hover-background);
+  margin-bottom: 20px;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  grid-template-rows: repeat(3, 1fr);
+  /* 3 rows */
+  gap: 10px;
+  /* space between boxes */
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(248, 248, 248, 0.586);
+  border-radius: 8px;
+}
+
+.boxes {
+  border: 2px solid var(--grey-color);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: .3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.notes a {
+  text-decoration: none;
+}
+
+.boxes p {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.boxes:hover {
+  border: 2px solid var(--hover-background);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn button {
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-textcolor);
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden.active {
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}

@@ -236,9 +236,15 @@ main {
   }
 
   .off-screen-menu ul li {
-    padding-top: 20px;
+    display: grid;
     width: 100%;
+    padding: 6px;
+    height: 100%;
+    height: auto;
+    border-bottom: 2px solid rgb(56, 56, 56);
+  
   }
+
 
   .ham-menu {
     height: 30px;
